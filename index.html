@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>sign in</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <form action="" class="formSignIn">
+            <legend>
+                sign in
+            </legend>
+
+            <label class="labelsForm" for="emailUser">Email Address</label>
+            <div class="inputEmail input">
+                <input type="email" name="" id="emailUser" placeholder="Enter Your Email">
+                <div class="iconInputEmail"><img src="img/email.svg" alt=""></div>
+            </div>
+
+            <label class="labelsForm" for="passwordUser">Password</label>
+            <div class="inputPassword input">
+                <input type="password" name="" id="passwordUser" placeholder="Enter Your password">
+                <div class="iconInputPassword"><img src="img/password.svg" alt=""></div>
+            </div>
+
+            <div class="otherOptions">
+                <div class="rememberMe">
+                    <input type="checkbox" name="" id="rememberMe">
+                    <label for="rememberMe" class="rememberMeLabel">Remember me</label>
+                </div>
+                <div class="forgetPassword">forget password?</div>
+            </div>
+            <button class="btnSubmit" type="submit">Sgin In</button>
+            <div class="sepertorSgin">
+                <div class="line"></div>
+                <div class="textOr">OR</div>
+                <div class="line"></div>
+            </div>
+            <button class="btnSginUp">sgin up</button>
+        </form>
+
+        <div class="containerModalStatus">
+            <div class="modalStatus">
+                <p class="status"></p>
+                <div class="modalStatusImg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round"  stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                  </svg>
+                  </div>
+            </div>
+        </div>
+
+        <form action="" class="formSginUp hidden">
+            <legend>
+                Sgin Up
+            </legend>
+            <label class="labelsForm" for="Username">Username</label>
+            <div class="inputUserName input">
+                <input type="text" name="" id="Username" placeholder="Username">
+                <div class="iconInputUserName"><img src="img/username.svg" alt=""></div>
+            </div>
+            <p class="usernameCheck hidden notAvilabel"></p>
+    
+            <label class="labelsForm" for="emailUserUp">Email Address</label>
+            <div class="inputEmailUp input">
+                <input type="email" name="" id="emailUserUp" placeholder="Enter Your Email">
+                <div class="iconInputEmail"><img src="img/email.svg" alt=""></div>
+            </div>
+            
+            <label class="labelsForm" for="emailUser">Password</label>
+            <div class="inputPasswordUp input">
+                <input type="password" name="" id="Password" placeholder="Enter Your password">
+                <div class="iconInputPassword"><img src="img/password.svg" alt=""></div>
+            </div>
+            
+            <label class="labelsForm" for="ConfirmPassword">confirm Password</label>
+            <div class=" input">
+                <input type=inputConfirmPasswordUp"password" name="" id="ConfirmPassword" placeholder="Enter Your Password">
+                <div class="iconInputPassword"><img src="img/password.svg" alt=""></div>
+            </div>
+            <p class="checkConfirmPassword hidden">Confirm Password is not equal to password</p>
+            <div class="agree">
+                <input type="checkbox" name="" id="agree">
+                <label class="agreeLabel" for="agree">I agree to the terms of service</label>
+            </div>
+            <button class="btnRegister opacity" type="submit" disable="true">register</button>
+            <div class="sepertorSgin">
+                <div class="line"></div>
+                <div class="textOr">OR</div>
+                <div class="line"></div>
+            </div>
+            <button class="btnBackSignIn" type="text">Sign In</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
