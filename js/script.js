@@ -16,6 +16,7 @@ let checkPassword = document.querySelector(".checkConfirmPassword");
 let closeModal = document.querySelector(".modalStatusImg");
 let modalStatus = document.querySelector(".containerModalStatus");
 let statusText = document.querySelector(".status");
+let checkEmail = document.querySelector(".emailCheck");
 
 // flag variables
 let isAgree = false;
@@ -24,6 +25,7 @@ let allmembers = null;
 let allowRegester = false;
 let validUsername = true;
 let validPassword = true;
+let validEmail = true;
 
 let showModel = (text, status) => {
     statusText.innerHTML = text
@@ -66,7 +68,7 @@ closeModal.addEventListener("click",()=>{
 })
 // check for rigister
 let checkRequer = () => {
-    if ((validPassword==true && validUsername==true && isAgree==true) && ( Username.value != "" && emailUserUp.value != "" && Password.value != "" && ConfirmPassword.value != "")) {
+    if ((validPassword==true && validUsername==true && isAgree==true, validEmail==true) && ( Username.value != "" && emailUserUp.value != "" && Password.value != "" && ConfirmPassword.value != "")) {
         btnregister.classList.remove("opacity");
         allowRegester = true;
     }else{
@@ -85,7 +87,7 @@ let transDb = (store, mod) => {
 Username.addEventListener("keyup", () => {
     let allUserName = allmembers.result.map(item => item.username);
     if (allUserName.includes(Username.value)) {
-        checkUserName.innerHTML= `username ${Username.value} not avilaibel`;
+        checkUserName.innerHTML= `username ${Username.value} Not available`;
         checkUserName.classList.remove("hidden");
         validUsername = false;
     }else{
@@ -95,6 +97,17 @@ Username.addEventListener("keyup", () => {
     checkRequer();
 });
 
+emailUserUp.addEventListener("keyup", () => {
+    let allEmail = allmembers.result.map(item => item.emailUser);
+    if (allEmail.includes(emailUserUp.value)) {
+        checkEmail.innerHTML= `email ${emailUserUp.value} Already used`;
+        checkEmail.classList.remove("hidden");
+        validEmail = false;
+    }else{
+        checkEmail.classList.add("hidden");
+        validEmail = true;
+    }
+});
 // check box action
 agree.addEventListener("change", ()=>{
     isAgree = !isAgree ;   
