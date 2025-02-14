@@ -1,7 +1,7 @@
 // document variables
-let formSginin = document.querySelector(".formSignIn");
-let formSginUp = document.querySelector(".formSginUp");
-let btnSignUp = document.querySelector(".btnSginUp");
+let formSignin = document.querySelector(".formSignIn");
+let formSignUp = document.querySelector(".formSignUp");
+let btnSignUp = document.querySelector(".btnSignUp");
 let backSignIn = document.querySelector(".btnBackSignIn");
 let btnregister = document.querySelector(".btnRegister");
 let checkUserName = document.querySelector(".usernameCheck");
@@ -68,7 +68,7 @@ closeModal.addEventListener("click",()=>{
 })
 // check for rigister
 let checkRequer = () => {
-    if ((validPassword==true && validUsername==true && isAgree==true, validEmail==true) && ( Username.value != "" && emailUserUp.value != "" && Password.value != "" && ConfirmPassword.value != "")) {
+    if ((validPassword==true && validUsername==true && isAgree==true && validEmail==true) && ( Username.value != "" && emailUserUp.value != "" && Password.value != "" && ConfirmPassword.value != "")) {
         btnregister.classList.remove("opacity");
         allowRegester = true;
     }else{
@@ -130,7 +130,7 @@ ConfirmPassword.addEventListener("keyup", checkPasswordup);
 Password.addEventListener("keyup", checkPasswordup);
 
 // submit in sign up
-formSginUp.addEventListener("submit",(e)=> {
+formSignUp.addEventListener("submit",(e)=> {
     e.preventDefault();
     if (allowRegester) {
         console.log(e);
@@ -153,13 +153,13 @@ formSginUp.addEventListener("submit",(e)=> {
         agree.checked = false;
         isAgree = false;
         checkRequer();
-        backTo(formSginUp, formSginin);
+        backTo(formSignUp, formSignin);
         showModel("Account created successfully", "ok")
     };
 });
 
 // submit for sign in 
-formSginin.addEventListener("submit",(e)=> {
+formSignin.addEventListener("submit",(e)=> {
     e.preventDefault();
     if (emailUser.value != "" && passwordUser != "") {
         console.log(allmembers.result);
@@ -196,11 +196,11 @@ let backTo = (input, output) => {
 
 btnSignUp.addEventListener("click", (e) => {
     e.preventDefault();
-    backTo(formSginin, formSginUp);
+    backTo(formSignin, formSignUp);
 });
 
 backSignIn.addEventListener("click", (e) => {
     e.preventDefault();
-    backTo(formSginUp, formSginin);
+    backTo(formSignUp, formSignin);
 });
 
