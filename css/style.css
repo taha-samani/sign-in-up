@@ -1,0 +1,429 @@
+:root {
+    --back-color-btn: #2E2D29;
+    --background-container: url("../img/1.webp");
+    --color-labels: #555555;
+    --back-color-form: #ffffff;
+    --color-forget-password: #7482FF;
+    --color-remember-me: #8E8E8E;
+    --color-seperotor-btn: #C2C2C2;
+    --btn-color-text: #ffffff;
+    --back-color-modal: rgba(79, 146, 223, 0.159);
+    --back-color-body: #fbfbfb;
+    --input-back: #F1F3F6;
+    --color-shadow-form: snow;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: var(--back-color-body);
+}
+.hidden{
+    display: none !important;
+}
+button {
+    border: none;
+}
+@font-face {
+    font-family: "popinsRegular";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "popinsSemiBold";
+    src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "popinsBold";
+    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+.containerChangeTheme{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+}
+.btnChangeTheme{
+    position: absolute;
+    top: -215px;
+    left: 444px;
+    padding: 5px;
+    color: var(--btn-color-text);
+    width: 50px;
+    height: 50px;
+    transition: 300ms ease-in-out;
+    border-radius: 8px;
+    background-color: var(--back-color-btn);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -ms-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+}
+.listTheme{
+    background-color: var(--back-color-form);
+    color: var(--btn-color-text);
+    width: 480px;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50px;
+    top: -325px;
+    list-style: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.theme {
+    width: 200px;
+    height: 56px;
+    display: flex;
+    margin: auto 0;
+    font-family: "popinsSemiBold";
+    font-size: 12px;
+    align-items: center;
+    line-height: 0.5px;
+    background-color: var(--back-color-btn);
+    padding: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.imgTheme {
+    width: 80px;
+    height: 40px;
+    padding: 0 5px 0 0; 
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+legend {
+    font-weight: bold;
+    font-family: "popinsBold";
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0;
+    color: var(--back-color-btn);
+}
+label ,input::placeholder{
+    font-family: "popinsRegular";
+    color: var(--color-labels);
+}
+input::placeholder{
+    opacity: 40%;
+}
+input {
+    background-color: var(--input-back);
+}
+.forgetPassword{
+    color: var(--color-labels);
+    font-family: "popinsRegular";
+}
+.rememberMeLabel{
+    color: var(--color-labels);
+}
+.usernameCheck, .emailCheck, .checkConfirmPassword {
+    color: red;
+    font-family: "popinsBold";
+    text-align: center;
+    padding: 5px 0 0 0;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.formSignIn,.formSignUp {
+    background-color: var(--back-color-form);
+    padding: 0px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formSignIn {
+    transition: 1.5s ease-in-out;
+    transform: rotate3d(0,1,0,0deg);
+    -webkit-transform: rotate3d(0,1,0,0deg);
+    -moz-transform: rotate3d(0,1,0,0deg);
+    -ms-transform: rotate3d(0,1,0,0deg);
+    -o-transform: rotate3d(0,1,0,0deg);
+    -moz-transition: 1.5s ease-in-out;
+    -ms-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    -webkit-transition: 1.5s ease-in-out;
+}
+.otherOptions {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formSignUp {
+    transform: rotate3d(0,1,0,-90deg);
+    transition:1.5s ease-in-out;
+    -webkit-transition:1.5s ease-in-out;
+    -webkit-transform: rotate3d(0,1,0,-90deg);
+    -moz-transform: rotate3d(0,1,0,-90deg);
+    -ms-transform: rotate3d(0,1,0,-90deg);
+    -o-transform: rotate3d(0,1,0,-90deg);
+    -moz-transition:1.5s ease-in-out;
+    -ms-transition:1.5s ease-in-out;
+    -o-transition:1.5s ease-in-out;
+}
+.agree {
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.input{
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 50px;
+    background-color: var(--input-back);
+    border: 0.5px solid var(--back-color-btn);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.containerModalStatus {
+    position: absolute;
+    width: 410px;
+    left: 35px;
+    top: -50px;
+    z-index: 5;
+    transition: 400ms ease-in;
+    -webkit-transition: 400ms ease-in;
+    -moz-transition: 400ms ease-in;
+    -ms-transition: 400ms ease-in;
+    -o-transition: 400ms ease-in;
+}
+.modalStatus{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "popinsSemiBold";
+    width: auto;
+    height: 50px;
+    padding: 8px;
+    background-color: var(--back-color-modal);
+    backdrop-filter: blur(45px);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+ .modalStatusImg {
+    height: 25px;
+    width: 25px;
+    color: red;
+ }
+#passwordUser, #emailUser, #emailUserUp,#Username, #Password,#ConfirmPassword{
+    width: calc(100% - 58px);
+    border: none;
+    margin-left: 8px ;
+}
+#emailUser:focus,#passwordUser:focus,#ConfirmPassword:focus,#Username:focus,#Password:focus,#emailUserUp:focus{
+    outline: none;
+}
+.iconInputEmail,.iconInputPassword,.iconInputUserName{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--back-color-btn);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.labelsForm {
+    padding: 5px;
+}
+.rememberMe{
+    display: flex;
+    align-items: center;
+}
+.btnSignIn,.btnSignUp,.btnRegister ,.btnBackSignIn{
+    color: var(--btn-color-text);
+    font-family: "popinsSemibold";
+    background-color: var(--back-color-btn);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.opacity{
+    opacity: 40%;
+}
+.sepertorSign{
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-seperotor-btn);
+    padding: 15px 0;
+    height: 40px;
+    align-items: center;
+}
+.line {
+    height: 1px;
+    background-color: var(--color-seperotor-btn);
+}
+.agreeLabel,.rememberMeLabel {
+    margin-left: 5px;
+}
+
+@media (min-width:300px) {
+    .mainContainer{
+        max-width: 480px;
+        background-image: none;
+    }
+    .containerChangeTheme {
+        display: none;
+    }
+    .formSignUp,.formSignIn{
+        width: 100%;
+        height: 100%;
+    }
+    .titelForm {
+        font-size: 28px;
+    }
+    label{
+        font-size: 10px;
+    }
+    .input {
+        height: 41px;
+    }
+    input::placeholder{
+        font-size: 8px;
+        margin: auto 0;
+    }
+    .iconInputEmail,.iconInputPassword,.iconInputUserName {
+        width: 40px;
+    }
+    .btnBackSignIn,.btnRegister,.btnSignUp,.btnSignIn{
+        height: 40px;
+    }
+    .rememberMeLabel,.agreeLabel, .forgetPassword {
+        font-size: 8px;
+    }
+    .sepertorSign{
+        font-size: 10px;
+    }
+    .line{
+        width: 45%;
+    }
+    .containerModalStatus{
+        width: calc(100% - 70px);
+        max-width: 410px;
+        left: auto;
+        right: auto;
+        margin: 0 35px;
+    }
+    .usernameCheck, .emailCheck, .checkConfirmPassword {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (min-width : 480px) {
+    .mainContainer{
+        margin: 0 auto;
+    }
+    .formSignIn,.formSignUp{
+        height: 700px;
+        border: 0.5px solid var(--color-shadow-form);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        box-shadow: 1px 1px 1px 1px var(--color-shadow-form);
+    }
+}
+
+@media (min-width: 992px) {
+    .mainContainer {
+        max-width: 100%;
+        background-image: var(--background-container);
+        background-size: cover;
+    }
+    .containerChangeTheme {
+        display: flex;
+    }
+    .formSignUp,.formSignIn{
+        height: 650px;
+        width: 480px;
+        margin-left: 50px;
+        border: none;
+        box-shadow: none;
+    }
+    .titelForm {
+        font-size: 28px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .input {
+        height: 51px;
+    }
+    input::placeholder{
+        font-size: 12px;
+        margin: auto 0;
+    }
+    .iconInputEmail,.iconInputPassword,.iconInputUserName {
+        width: 50px;
+    }
+    .btnBackSignIn,.btnRegister,.btnSignUp,.btnSignIn{
+        height: 50px;
+    }
+    .rememberMeLabel,.agreeLabel, .forgetPassword {
+        font-size: 12px;
+    }
+    .sepertorSign{
+        font-size: 10px;
+    }
+    .line{
+        width: 45%;
+    }
+    .containerModalStatus{
+        width: calc(100% - 70px);
+        max-width: 410px;
+        left: auto;
+        right: auto;
+        margin: 0 85px;
+    }
+    .usernameCheck, .emailCheck, .checkConfirmPassword {
+        font-size: 12px;
+    }
+
+}
